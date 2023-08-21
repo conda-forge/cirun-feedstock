@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: Cirun Python Client
 
-Development: https://github.com/aktechlabs/cirun-docs
+Development: https://github.com/aktechlabs/cirun-py
 
 Current build status
 ====================
