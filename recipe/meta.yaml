@@ -1,5 +1,5 @@
 {% set name = "cirun" %}
-{% set version = "0.24" %}
+{% set version = "0.25" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cirun-{{ version }}.tar.gz
-  sha256: f9f673345f2c48f94906fca4cbfef40fc1f59eef3d73aad89bd0cb3dcd07c200
+  sha256: 00a83272bd1490a2311d98eccb4ada7ad0ecf9c2a9220c52ae46b3e680c62a77
 
 build:
   noarch: python
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - hatchling
   run:
-    - python >=3.7
+    - python >=3.8
     - hatch
     - hatchling
     - requests
@@ -40,7 +40,7 @@ test:
 about:
   home: https://pypi.org/project/cirun/
   summary: Cirun Python Client
-  dev_url: https://github.com/aktechlabs/cirun-docs
+  dev_url: https://github.com/aktechlabs/cirun-py
   license: MIT
   license_file: LICENSE.txt
 
