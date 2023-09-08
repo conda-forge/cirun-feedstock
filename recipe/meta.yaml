@@ -1,5 +1,5 @@
 {% set name = "cirun" %}
-{% set version = "0.26" %}
+{% set version = "0.27" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cirun-{{ version }}.tar.gz
-  sha256: bd33ba1ae26e1297d972f744d36521b29a628f19a0b7fb17d91bbba6cb99a43d
+  sha256: 500032012a446d2e2afe45ce03be9b22df30883abb8e4fe22d610fd314b8f4be
 
 build:
   noarch: python
