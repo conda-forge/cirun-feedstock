@@ -146,4 +146,6 @@ Feedstock Maintainers
 =====================
 
 * [@aktech](https://github.com/aktech/)
+* [@aktechlabs-bot](https://github.com/aktechlabs-bot/)
+* [@cirun-bot](https://github.com/cirun-bot/)
 
