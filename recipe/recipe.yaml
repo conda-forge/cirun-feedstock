@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: '0.31'
+  build_number: '0'
+
+package:
+  name: cirun
+  version: ${{ version }}
+
+source:
+- url: https://files.pythonhosted.org/packages/source/c/cirun/cirun-${{ version }}.tar.gz
+  sha256: fe6199a1a889697fe6864b4d904e851273717367b9872cfa3d865dec8a2768d4
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - cirun = cirun.main:app
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - hatchling
+  run:
+    - python >=${{ python_min }}
+    - click
+    - requests
+    - rich
+    - typer
+
+tests:
+  - python:
+      imports:
+        - cirun
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - '*'
+
+about:
+  summary: Cirun Python Client
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://pypi.org/project/cirun/
+  repository: https://github.com/aktechlabs/cirun-py
+
+extra:
+  recipe-maintainers:
+    - aktech
+    - aktechlabs-bot
+    - cirun-bot
